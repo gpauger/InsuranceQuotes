@@ -1,0 +1,57 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Get your quote today!</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-12">
+                    Please enter your date of birth:<input name="DOB" type="text" class="form-control" placeholder="MM/DD/YYYY" />
+                </div>
+                <div class="form-group col-md-12">
+                    What year was your car made?<input name="CarYear" type="text" class="form-control" placeholder="YYYY" />
+                </div>
+                <div class="form-group col-md-12">
+                    What is your car make?<input name="CarMake" type="text" class="form-control" placeholder="e.g., Honda" />
+                </div>
+                <div class="form-group col-md-12">
+                    What is your car model? <input name="CarModel" type="text" class="form-control" placeholder="e.g, Civic" />
+                </div>
+                <div class="form-group col-md-12">
+                    How many speeding tickets have you recieved?<input name="Tickets" type="number" class="form-control" placeholder="Number of Tickets" />
+                </div>
+                Have you ever been issued a DUI?
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="dui" id="option1" value="no" autocomplete="off" checked />No
+                    </label>
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="dui" id="option2" value="yes" autocomplete="off"  />Yes
+                    </label>
+                </div><br /><br />
+                Would you like full coverage or liability only?
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="instype" id="option1" value="full" autocomplete="off" checked />Full
+                    </label>
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="instype" id="option2" value="liability" autocomplete="off"  />Liability
+                    </label>
+                </div><br /><br />
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
